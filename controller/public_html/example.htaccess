@@ -1,0 +1,9 @@
+AddDefaultCharset off
+RewriteEngine On
+
+#RewriteCond %{HTTP:X-HTTPS} !1
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
