@@ -20,6 +20,7 @@
 git clone https://github.com/Sagleft/PHP-blank-MVC.git project
 cd project
 mkdir view/cache
+cp .env.example .env
 cp composer.json.example composer.json
 composer update
 cd controller/public_html
