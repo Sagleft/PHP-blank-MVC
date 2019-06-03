@@ -23,7 +23,7 @@ mkdir view/cache
 cp composer.json.example composer.json
 composer update
 cd controller/public_html
-cp .htaccess example.htaccess
+cp example.htaccess .htaccess
 ```
 
 Directory: ``` controller\public_html ```
