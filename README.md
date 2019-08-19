@@ -46,5 +46,4 @@ Directory: ``` controller\public_html ```.
 
 ## Copyright
 
-* Copyright (c) 2019 Sagleft.
-* Skeleton Web Template Copyright (c) 2011-2014 Dave Gamache.
+Copyright (c) 2019 Sagleft.
