@@ -2,9 +2,9 @@
 <html lang="ru">
 	{% include 'parts/head.tmpl' %}
 	<body>
-		{# mdiv #}
+		{% include 'parts/navbar.tmpl' %}
+		{% include 'parts/main/promo.tmpl' %}
 		<div class="container">
-			{% include 'parts/navbar.tmpl' %}
 			<div class="row">
 				<div class="one-half column" style="margin-top: 5%">
 					<h4>Blank Project</h4>
@@ -12,14 +12,9 @@
 					<p>Верстка отделена через Twig-шаблоны, которые располагаются в директории <code>view/</code> и имеют расширение .tmpl</p>
 					<p>Скрипты, ответственные за вывод страниц находятся в <code>controller/public_html</code> и в <code>controller/src</code></p>
 					<p>Основная логика приложения (сервиса) расположена в <code>model/</code></p>
-					<p>В качестве разметки используется Skeleton Web Template.</p>
-					
-					<a class="button button-primary" href="#">Click</a>
-					<a class="button" href="https://github.com/Sagleft/PHP-blank-MVC.git">Github</a>
 				</div>
 			</div>
-		  </div>
 		</div>
-		{# mdiv #}
+		{% include 'parts/footer.tmpl' %}
 	</body>
 </html>

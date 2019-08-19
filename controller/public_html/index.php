@@ -1,9 +1,10 @@
 <?php
+	session_start();
 	require_once __DIR__ . "/../vendor/autoload.php";
 	
-	$enviro = new \App\Model\Environment();
-	$render = new \App\Controller\Render([
-		'tag'  => 'home'
+	$handler = new \App\Controller\Handler();
+	
+	$handler->render([
+		'tag'    => 'home'
 	]);
-	$render->twigRender();
 	
