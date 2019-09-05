@@ -39,7 +39,7 @@ cp example.htaccess .htaccess
 
 Далее внесите изменения в .env
 
-rpc_* параметры - на json-rpc подключение к *coind, например, MFCoin.
+rpc_* параметры - на json-rpc подключение к *coind, например, MFCoin. Если необходимо.
 
 Directory: ``` controller\public_html ```.
 

@@ -14,9 +14,9 @@
 			];
 		}
 		
-		public function getLocale(): array {
+		/* public function getLocale(): array {
 			return $this->data_wrap['locale'];
-		}
+		} */
 		
 		public function twigRender() {
 			$loader = new \Twig_Loader_Filesystem(__DIR__ . '/../../view/');
