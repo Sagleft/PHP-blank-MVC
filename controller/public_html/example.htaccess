@@ -1,6 +1,10 @@
 AddDefaultCharset off
 RewriteEngine On
 
+<Files *.htaccess> 
+  deny from all 
+</Files>
+
 #RewriteCond %{HTTP:X-HTTPS} !1
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
