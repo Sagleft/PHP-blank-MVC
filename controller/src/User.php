@@ -40,4 +40,8 @@
 		public function setdb($db): void {
 			$this->db = &$db;
 		}
+		
+		public function redirect($url = '/') {
+			header("Location: " . $url); exit;
+		}
 	}
