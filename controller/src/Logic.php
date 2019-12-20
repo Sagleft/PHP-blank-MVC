@@ -2,8 +2,8 @@
 	namespace App\Controller;
 	
 	class Logic {
-		private $coin_connection = null;
-		private $db = null;
+		public $user = null;
+		private $db  = null;
 		
 		public function __construct() {
 			//
