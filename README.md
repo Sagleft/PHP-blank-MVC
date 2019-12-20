@@ -1,18 +1,16 @@
-# Blank MVC
+## Features
 
-## Фичи
+* separation of layout and code through twig-templates;
+* similarity of MVC structure;
+* .ENV via dotenv;
+* meta tags for previews in social networks;
+* something else;
 
-* разделение верстки и кода через twig-шаблоны;
-* подобие MVC структуры;
-* .ENV через dotenv;
-* мета-теги для превью в соцсетях;
-* что-то еще;
-
-## Требования
+## Requirements
 * PHP 7.1;
 * Apache 2.6;
 
-# Логика проекта
+# Project logic
 
 1. Подключаются библиотеки через composer;
 2. создается экземпляр Handler;
@@ -21,11 +19,11 @@
 5. Handler рендерит страницу через Render;
 6. Render обрабатывает запрошенный шаблон и через Twig выдает страницу.
 
-## Развертывание
+## Installation
 
-Пример для проекта с именем project:
+An example for a project called project:
 
-```
+```bash
 git clone https://github.com/Sagleft/PHP-blank-MVC.git project
 cd project
 mkdir view/cache
@@ -37,9 +35,7 @@ cd controller/public_html
 cp example.htaccess .htaccess
 ```
 
-Далее внесите изменения в .env
-
-rpc_* параметры - на json-rpc подключение к *coind, например, MFCoin. Если необходимо.
+Next, make changes to .env
 
 Directory: ``` controller\public_html ```.
 
