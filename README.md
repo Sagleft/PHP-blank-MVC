@@ -1,3 +1,6 @@
+
+![screenshot](https://github.com/Sagleft/PHP-blank-MVC/raw/master/controller/public_html/img/screenshot.png)
+
 ## Features
 
 * separation of layout and code through twig-templates;
