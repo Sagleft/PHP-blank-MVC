@@ -27,13 +27,11 @@
 An example for a project called project:
 
 ```bash
-git clone https://github.com/Sagleft/PHP-blank-MVC.git project
-cd project
+composer update
 mkdir view/cache
 chmod 777 view/cache
-cp .env.example .env
-cp composer.json.example composer.json
-composer update
+cp example.env .env
+cp composer.example.json composer.json
 cd controller/public_html
 cp example.htaccess .htaccess
 ```
@@ -42,7 +40,6 @@ Next, make changes to .env
 
 Directory: ``` controller\public_html ```.
 
-
 ## Copyright
 
-Copyright (c) 2019 Sagleft.
+Copyright (c) 2020 Sagleft.
