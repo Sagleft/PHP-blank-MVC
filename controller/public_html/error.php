@@ -7,7 +7,7 @@
 	
 	$handler->render([
 		'tag'   => 'error',
-		'title' => 'Ошибка',
+		'title' => 'Error',
 		'code'  => $err_code,
 		'user'  => $handler->user->data
 	]);
