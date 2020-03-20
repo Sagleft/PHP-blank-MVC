@@ -27,11 +27,11 @@
 An example for a project called project:
 
 ```bash
-composer update
 mkdir view/cache
 chmod 777 view/cache
 cp example.env .env
 cp composer.example.json composer.json
+composer update
 cd controller/public_html
 cp example.htaccess .htaccess
 ```
