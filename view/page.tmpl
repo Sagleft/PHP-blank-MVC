@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+	{% include 'parts/head.tmpl' %}
+	<body>
+		<div class="white-wrap">
+			{% include 'parts/navbar.tmpl' %}
+			{% if page.tag == 'home' %}
+				{% include 'parts/promo.tmpl' %}
+			{% endif %}
+			<div class="uk-container uk-padding">
+				{% include 'pages/'~page.tag~'.tmpl' %}
+			</div>
+		</div>
+		{% include 'parts/footer.tmpl' %}
+	</body>
+</html>

@@ -7,3 +7,11 @@
 .link-simple, .link-simple:hover {
 	text-decoration: none;
 }
+
+.white-wrap {
+	background: white;
+}
+
+.text-center {
+	text-align: center;
+}

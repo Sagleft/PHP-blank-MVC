@@ -1,0 +1,11 @@
+
+<h1 id="introduction">An error has occurred</h1>
+{% if page.code == 404 %}
+	<h4>The requested page was not found</h4>
+{% elseif page.code == 500 %}
+	<h4>Server-side error occurred</h4>
+{% elseif page.code == 403 %}
+	<h4>Access is denied</h4>
+{% else %}
+	<h4>No information on this error</h4>
+{% endif %}
