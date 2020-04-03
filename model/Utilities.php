@@ -69,7 +69,7 @@
 		}
 		
 		function curl_get($url) {
-			return \App\Utilities::cURL($url, '', '', '');
+			return Utilities::cURL($url, '', '', '');
 		}
 		
 		function generateCode($length = 6): string {
@@ -92,14 +92,14 @@
 						exit($errCode.' ('.$key.' is empty)');
 					}
 				} else {
-					$data[$key] = \App\Model\Utilities::data_filter($arr[$key], $db_link);
+					$data[$key] = Utilities::data_filter($arr[$key], $db_link);
 				}
 			}
 			return $data;
 		}
 		
 		function checkINT($value = 0, $db_link = null): int {
-			$value = \App\Model\Utilities::data_filter($value, $db_link) + 0;
+			$value = Utilities::data_filter($value, $db_link) + 0;
 			if(!is_int($value)) {
 				$value = 0;
 			}
@@ -107,7 +107,7 @@
 		}
 		
 		function checkFloat($value = 0, $db_link = null): float {
-			$value = floatval(\App\Model\Utilities::data_filter($value, $db_link));
+			$value = floatval(Utilities::data_filter($value, $db_link));
 			if(!is_float($value)) {
 				$value = 0;
 			}
@@ -121,7 +121,7 @@
 				if(!isset($arr[$key]) || empty($arr[$key])) {
 					$data[$key] = 0;
 				} else {
-					$data[$key] = \App\Model\Utilities::checkINT($arr[$key], $db_link);
+					$data[$key] = Utilities::checkINT($arr[$key], $db_link);
 				}
 			}
 			return $data;
