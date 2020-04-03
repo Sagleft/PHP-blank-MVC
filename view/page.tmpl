@@ -5,7 +5,7 @@
 		<div class="white-wrap">
 			{% include 'parts/navbar.tmpl' %}
 			{% if page.tag == 'home' %}
-				{% include 'parts/promo.tmpl' %}
+				{% include 'parts/main/promo.tmpl' %}
 			{% endif %}
 			<div class="uk-container uk-padding">
 				{% include 'pages/'~page.tag~'.tmpl' %}
