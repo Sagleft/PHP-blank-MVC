@@ -15,16 +15,24 @@
 
 # Project logic
 
-1. Подключаются библиотеки через composer;
-2. создается экземпляр Handler;
-3. Handler создает экземпляры Environment, Logic и User;
-4. Environment загружает данные из .env;
-5. Handler рендерит страницу через Render;
-6. Render обрабатывает запрошенный шаблон и через Twig выдает страницу.
+1. Libraries are connected through composer;
+2. an instance of Handler is created;
+3. Handler creates instances of Environment, Logic and User;
+4. Environment loads data from .env;
+5. Handler renders the page through Render;
+6. Render processes the requested template and displays the page through Twig.
 
 ## Installation
 
 An example for a project called project:
+
+run
+
+```bash
+sh install.sh
+```
+
+or manual:
 
 ```bash
 mkdir view/cache
@@ -38,7 +46,19 @@ cp example.htaccess .htaccess
 
 Next, make changes to .env
 
-Directory: ``` controller\public_html ```.
+Apache public_html directory: ``` controller\public_html ```.
+
+You can find an example of apache virtual host in the file ```apache.conf```
+
+it must be placed along the path:
+
+* RH-based systems: ```/etc/httpd/conf.d/```
+* Debian based: ```/etc/apache2/sites-enabled/```
+
+## TODO
+
+1. Complete the installation script, make automatic configuration of the apache virtual host;
+2. make docker.
 
 ## Copyright
 
