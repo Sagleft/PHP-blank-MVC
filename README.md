@@ -58,7 +58,11 @@ it must be placed along the path:
 ## TODO
 
 1. Complete the installation script, make automatic configuration of the apache virtual host;
-2. make docker.
+2. make docker;
+3. remove github-btn;
+4. rebuild the interface;
+5. add more showreel-gizmos;
+6. add asynchrony.
 
 ## Copyright
 
