@@ -62,7 +62,8 @@ it must be placed along the path:
 3. remove github-btn;
 4. rebuild the interface;
 5. add more showreel-gizmos;
-6. add asynchrony.
+6. add asynchrony;
+7. turn the project into a composer package.
 
 ## Copyright
 
