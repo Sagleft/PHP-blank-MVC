@@ -1,8 +1,8 @@
 /composer.json
+/composer.lock
 /controller/vendor/**
 /view/cache/**
 /logs/**
 .env
 .htaccess
 *.bak
-
