@@ -2,7 +2,7 @@
 	namespace App\Controller;
 
 	class Render {
-		private $data_wrap = [
+		protected $data_wrap = [
 			'page'    => [],
 			'version' => 1
 		];
@@ -13,10 +13,6 @@
 				'version' => getenv('version')
 			];
 		}
-
-		/* public function getLocale(): array {
-			return $this->data_wrap['locale'];
-		} */
 
 		public function twigRender() {
 			$loader = new \Twig_Loader_Filesystem(__DIR__ . '/../../view/');
