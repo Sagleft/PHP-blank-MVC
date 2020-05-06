@@ -22,7 +22,7 @@
 			$this->user    = new \App\Controller\User();
 			$this->renderT = new \App\Controller\Render([]);
 
-			if(if($this->isDBEnabled())) {
+			if($this->isDBEnabled()) {
 				$this->logic->setdb($this->db);
 				$this->user->setdb($this->db);
 			}
@@ -36,5 +36,13 @@
 		public function render($data = []) {
 			$this->renderT = new \App\Controller\Render($data);
 			$this->renderT->twigRender();
+		}
+
+		public function dataFilter($str = '') {
+			if($this->isDBEnabled()) {
+				return \App\Model\Utilities::dataFilter($str, $this->db);
+			} else {
+				return \App\Model\Utilities::dataFilter($str);
+			}
 		}
 	}
