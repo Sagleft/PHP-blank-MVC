@@ -1,13 +1,12 @@
 <?php
 	namespace App\Model;
 	class Environment {
-		function __construct() {
+		public function __construct() {
 			$this->loadFromENV();
 		}
-		
-		function loadFromENV() {
+
+		public function loadFromENV() {
 			$dotenv = \Dotenv\Dotenv::create(__DIR__ . "/../");
 			$dotenv->load();
 		}
 	}
-	
