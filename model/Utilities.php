@@ -1,13 +1,13 @@
 <?php
 	namespace App\Model;
-	
+
 	class Utilities {
 		function isJson($string): bool {
 			return ((is_string($string) && (is_object(json_decode($string)) || is_array(json_decode($string))))) ? true : false;
 		}
-		
-		function data_filter($string = "", $db_link = null) {
-			//\App\Model\Utilities::data_filter
+
+		function dataFilter($string = "", $db_link = null) {
+			//\App\Model\Utilities::dataFilter
 			$string = strip_tags($string);
 			$string = stripslashes($string);
 			$string = htmlspecialchars($string);
@@ -17,7 +17,7 @@
 			}
 			return $string;
 		}
-		
+
 		function cURL($url, $ref, $header, $cookie, $p=null){
 			$curlDefault = true;
 			//чтобы тестировать на сервере, на котором нет guzzle
@@ -67,11 +67,11 @@
 				}
 			}
 		}
-		
+
 		function curl_get($url) {
 			return Utilities::cURL($url, '', '', '');
 		}
-		
+
 		function generateCode($length = 6): string {
 			// \App\Model\Utilities::generateCode
 			$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ0123456789";
@@ -82,7 +82,7 @@
 			}
 			return $code;
 		}
-		
+
 		//кажется, return: mixed
 		function checkFields($arr = [], $keysArr = [], $errCode = "error", $db_link = null, $ignore_errors = false) {
 			$data = [];
@@ -97,7 +97,7 @@
 			}
 			return $data;
 		}
-		
+
 		function checkINT($value = 0, $db_link = null): int {
 			$value = Utilities::data_filter($value, $db_link) + 0;
 			if(!is_int($value)) {
@@ -105,7 +105,7 @@
 			}
 			return $value;
 		}
-		
+
 		function checkFloat($value = 0, $db_link = null): float {
 			$value = floatval(Utilities::data_filter($value, $db_link));
 			if(!is_float($value)) {
@@ -113,7 +113,7 @@
 			}
 			return $value;
 		}
-		
+
 		function checkINTFields($arr = [], $keysArr = [], $db_link = null): array {
 			//$db_link - ссылка на экземпляр \App\Model\DataBase
 			$data = [];
@@ -127,4 +127,3 @@
 			return $data;
 		}
 	}
-	
