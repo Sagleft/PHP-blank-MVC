@@ -99,7 +99,7 @@
 		}
 
 		function checkINT($value = 0, $db_link = null): int {
-			$value = Utilities::data_filter($value, $db_link) + 0;
+			$value = Utilities::dataFilter($value, $db_link) + 0;
 			if(!is_int($value)) {
 				$value = 0;
 			}
@@ -107,7 +107,7 @@
 		}
 
 		function checkFloat($value = 0, $db_link = null): float {
-			$value = floatval(Utilities::data_filter($value, $db_link));
+			$value = floatval(Utilities::dataFilter($value, $db_link));
 			if(!is_float($value)) {
 				$value = 0;
 			}
