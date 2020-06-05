@@ -92,7 +92,7 @@
 						exit($errCode.' ('.$key.' is empty)');
 					}
 				} else {
-					$data[$key] = Utilities::data_filter($arr[$key], $db_link);
+					$data[$key] = Utilities::dataFilter($arr[$key], $db_link);
 				}
 			}
 			return $data;
