@@ -13,7 +13,7 @@
 
 		public function __construct() {
 			$this->enviro  = new \App\Model\Environment();
-			$this->db_enabled = getenv('enable_db') == '1';
+			$this->db_enabled = getenv('db_enabled') == '1';
 			if($this->isDBEnabled()) {
 				$this->db = new \App\Model\DataBase();
 			}
