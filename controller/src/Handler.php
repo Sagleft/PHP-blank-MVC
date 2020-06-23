@@ -38,11 +38,15 @@
 			$this->renderT->twigRender();
 		}
 
-		public function dataFilter($str = '') {
+		public function dataFilter($str = ''): string {
 			if($this->isDBEnabled()) {
 				return \App\Model\Utilities::dataFilter($str, $this->db);
 			} else {
 				return \App\Model\Utilities::dataFilter($str);
 			}
+		}
+		
+		public function checkINT($value = 0): int {
+			return \App\Model\Utilities::dataFilter($value, $this->db);
 		}
 	}
