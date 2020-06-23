@@ -2,11 +2,11 @@
 	namespace App\Model;
 
 	class Utilities {
-		function isJson($string): bool {
+		public static function isJson($string): bool {
 			return ((is_string($string) && (is_object(json_decode($string)) || is_array(json_decode($string))))) ? true : false;
 		}
 
-		function dataFilter($string = "", $db_link = null) {
+		public static function dataFilter($string = "", $db_link = null) {
 			//\App\Model\Utilities::dataFilter
 			$string = strip_tags($string);
 			$string = stripslashes($string);
@@ -18,7 +18,7 @@
 			return $string;
 		}
 
-		function cURL($url, $ref, $header, $cookie, $p=null){
+		public static function cURL($url, $ref, $header, $cookie, $p=null){
 			$curlDefault = true;
 			//чтобы тестировать на сервере, на котором нет guzzle
 			if($curlDefault) {
@@ -68,11 +68,11 @@
 			}
 		}
 
-		function curl_get($url) {
+		public static function curl_get($url) {
 			return Utilities::cURL($url, '', '', '');
 		}
 
-		function generateCode($length = 6): string {
+		public static function generateCode($length = 6): string {
 			// \App\Model\Utilities::generateCode
 			$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ0123456789";
 			$code = "";
@@ -84,7 +84,7 @@
 		}
 
 		//кажется, return: mixed
-		function checkFields($arr = [], $keysArr = [], $errCode = "error", $db_link = null, $ignore_errors = false) {
+		public static function checkFields($arr = [], $keysArr = [], $errCode = "error", $db_link = null, $ignore_errors = false) {
 			$data = [];
 			foreach ($keysArr as $key) {
 				if(!isset($arr[$key]) || (empty($arr[$key]) && $arr[$key] != "0" && $arr[$key] != 0)) {
@@ -98,7 +98,7 @@
 			return $data;
 		}
 
-		function checkINT($value = 0, $db_link = null): int {
+		public static function checkINT($value = 0, $db_link = null): int {
 			$value = Utilities::dataFilter($value, $db_link) + 0;
 			if(!is_int($value)) {
 				$value = 0;
@@ -106,7 +106,7 @@
 			return $value;
 		}
 
-		function checkFloat($value = 0, $db_link = null): float {
+		public static function checkFloat($value = 0, $db_link = null): float {
 			$value = floatval(Utilities::dataFilter($value, $db_link));
 			if(!is_float($value)) {
 				$value = 0;
@@ -114,7 +114,7 @@
 			return $value;
 		}
 
-		function checkINTFields($arr = [], $keysArr = [], $db_link = null): array {
+		public static function checkINTFields($arr = [], $keysArr = [], $db_link = null): array {
 			//$db_link - ссылка на экземпляр \App\Model\DataBase
 			$data = [];
 			foreach ($keysArr as $key) {
