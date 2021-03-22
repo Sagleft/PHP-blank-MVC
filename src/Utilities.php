@@ -1,5 +1,5 @@
 <?php
-	namespace App\Model;
+	namespace App;
 
 	class Utilities {
 		public static function isJson($string): bool {
@@ -7,7 +7,6 @@
 		}
 
 		public static function dataFilter($string = "", $db_link = null) {
-			//\App\Model\Utilities::dataFilter
 			$string = strip_tags($string);
 			$string = stripslashes($string);
 			$string = htmlspecialchars($string);
@@ -20,7 +19,6 @@
 
 		public static function cURL($url, $ref, $header, $cookie, $p=null){
 			$curlDefault = true;
-			//чтобы тестировать на сервере, на котором нет guzzle
 			if($curlDefault) {
 				$ch =  curl_init();
 				curl_setopt($ch, CURLOPT_URL, $url);
@@ -61,8 +59,7 @@
 					}
 					return $request->getbody();
 				} catch(Exception $e) {
-					//TODO: обработку ошибки
-					//можно обернуть в json
+					//TODO
 					echo 'guzzle error: ' . $e->getMessage();
 				}
 			}
@@ -73,7 +70,6 @@
 		}
 
 		public static function generateCode($length = 6): string {
-			// \App\Model\Utilities::generateCode
 			$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ0123456789";
 			$code = "";
 			$clen = strlen($chars) - 1;
@@ -115,7 +111,6 @@
 		}
 
 		public static function checkINTFields($arr = [], $keysArr = [], $db_link = null): array {
-			//$db_link - ссылка на экземпляр \App\Model\DataBase
 			$data = [];
 			foreach ($keysArr as $key) {
 				if(!isset($arr[$key]) || empty($arr[$key])) {

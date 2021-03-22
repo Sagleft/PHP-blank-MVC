@@ -1,5 +1,5 @@
 <?php
-	namespace App\Controller;
+	namespace App;
 
 	class Render {
 		protected $data_wrap = [

@@ -1,5 +1,5 @@
 <?php
-	namespace App\Model;
+	namespace App;
 	class Environment {
 		public function __construct() {
 			$this->loadFromENV();

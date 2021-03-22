@@ -1,6 +1,5 @@
-/composer.json
 /composer.lock
-/controller/vendor/**
+/vendor/**
 /view/cache/**
 /logs/**
 .env
