@@ -1,5 +1,5 @@
 
-![screenshot](https://github.com/Sagleft/PHP-blank-MVC/raw/master/controller/public_html/img/screenshot.png)
+![screenshot](https://github.com/Sagleft/PHP-blank-MVC/raw/master/public_html/img/screenshot.png)
 
 ## Features
 
