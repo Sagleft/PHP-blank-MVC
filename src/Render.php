@@ -15,9 +15,9 @@
 		}
 
 		public function twigRender() {
-			$loader = new \Twig_Loader_Filesystem(__DIR__ . '/../../view/');
+			$loader = new \Twig_Loader_Filesystem(__DIR__ . '/../view/');
 			$twig = new \Twig_Environment($loader, [
-				'cache'       => __DIR__ . '/../../view/cache',
+				'cache'       => __DIR__ . '/../view/cache',
 				'auto_reload' => getenv('auto_reload')
 			]);
 			exit($twig->render('page.tmpl', $this->data_wrap));

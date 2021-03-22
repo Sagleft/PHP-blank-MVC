@@ -33,7 +33,7 @@
 		}
 
 		public function render($data = []) {
-			$this->renderT = new \App\Controller\Render($data);
+			$this->renderT = new Render($data);
 			$this->renderT->twigRender();
 		}
 
